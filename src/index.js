@@ -112,4 +112,36 @@ else if (anotherCondition){
         console.log('Unkown User');
  }
 
- 
+ //Loop Strucutures
+ //for
+ for (let i = 0; i < 5; i++){
+    console.log('Hello World');
+ }
+
+ //while
+ let i = 0;
+ while (i <= 5) {
+    if (i % 2 !== 0) console.log(i);
+    i++;
+ }
+
+ //do-while
+ do {
+    if (i % 2 !== 0) console.log(i);
+    i++;
+ } while (i <= 5); 
+
+ //for-in
+ const person ={
+    name:'Rebeca',
+    age: 19
+ }
+
+ for (let key in person)
+    console.log(key);
+
+//for-of
+const colors = ['red', 'green', 'blue'];
+
+for (let color of colors)
+    console.log(color);
