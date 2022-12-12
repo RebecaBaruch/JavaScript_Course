@@ -193,3 +193,28 @@ const circle_ = new Circle(1);
 
 //Primitives are copied by their value
 //Objects are copied by their reference
+
+//Clonig an object
+//first option
+const another = {}
+for(let key in circle)
+another[key] = circle[key]
+
+//second option
+another = Object.assign({}, circle);
+
+//third option
+another = {...circle};
+
+console.log(another);
+
+//String primitive
+const message = 'hi';
+
+//String object 
+const anotherMessage = new String('hi');
+
+//Template literals
+const newMessage = 
+`Hi ${name}
+Tahnk you for joining my mailing list.`;
