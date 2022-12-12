@@ -145,3 +145,51 @@ const colors = ['red', 'green', 'blue'];
 
 for (let color of colors)
     console.log(color);
+
+//Objects
+const circle = {
+    radius: 1,
+    location: {
+        x:1,
+        y: 1
+    },
+    isVisible: true,
+    draw: function(){
+        console.log('draw');
+    }
+}
+
+circle.draw();//Method
+
+//Camel Notation: oneTwoThreeFour
+//Pascal Notation: OndeTwoTrheeFour
+
+
+//Factory Function
+function createCircle(radius, location){
+    return {
+        radius,
+        draw(){
+            console.log('draw');
+        }
+    }
+}
+
+const circle1 = createCricle(1);
+console.log(circle1);
+
+const circle2 = createCircle(2);
+console.log(circle2);
+
+//Constructor Functions
+function Circle(radius){
+    this.radius = radius; //reference to the object that is executing these piece of code
+    this.draw = function(){
+        console.log('draw');
+    }
+}
+
+const circle_ = new Circle(1);
+
+//Primitives are copied by their value
+//Objects are copied by their reference
