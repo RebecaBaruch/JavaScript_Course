@@ -376,3 +376,52 @@ console.log(items);
 const sum = numbers.reduce((accumulator, currentValue) => {
     return accumulator + currentValue;
 }, 0)
+
+
+//Function Declaration
+//Hoisting
+function wal(){
+    console.log('walk');
+}//can be called before being defined -> Hoisting
+
+//Anonymous Funciton Expression
+let run = function(){
+    console.log('run');
+}//can not be called before being defined
+
+//aguments property
+//...args
+
+//geters => acces properties
+//setters => change (mutate) them
+
+const personP = {
+    firstName: 'Rebeca',
+    lastName: 'Oliveira',
+    get fullName(){
+        return `${personP.firstName} ${personP.lastName}`
+    },
+    set fullName(value){
+        if(typeof value !== 'string')
+            throw new Error('Value is not a string');
+
+        const partsPerson = value.split('');
+        if(parts.length !== 2)
+            throw new ErrorEvent('Enter a first and last name')
+
+        this.firstName = partsPerson[0];
+        this.lastName = parts[1];
+    }
+};
+
+try{
+    personP.fullName = null;
+}
+catch(e){
+    alert(e);
+}
+
+console.log(personP);
+
+//Local and global escope
+//const and let are accessible only where they are declared
